@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SideHustle AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">✦ SideHustle <span>AI</span></a>
+    <span class="privacy">● Browser-first AI</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">YOUR MINI BUSINESS COPILOT</p>
+      <h1>Turn your product into<br>
+        <span>a listing that sells.</span>
+      </h1>
+      <p class="subtitle">
+        Create product titles, descriptions, tags and captions
+        in minutes. Built for makers and small online shops.
+      </p>
+      <div class="features">
+        ✓ No API key &nbsp; ✓ Open-weight AI &nbsp; ✓ Privacy-minded
+      </div>
+    </section>
+
+    <section class="workspace">
+
+      <div class="panel">
+        <h2>01. Tell us about your product</h2>
+
+        <form id="productForm">
+          <label for="productName">Product name *</label>
+          <input id="productName" required
+            placeholder="e.g. Handmade bamboo cutlery">
+
+          <div class="two-col">
+            <div>
+              <label for="category">Category</label>
+              <select id="category">
+                <option>Handmade & crafts</option>
+                <option>Fashion & accessories</option>
+                <option>Home & living</option>
+                <option>Beauty & wellness</option>
+                <option>Digital product</option>
+                <option>Electronics</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="audience">Target customer</label>
+              <select id="audience">
+                <option>Eco-conscious shoppers</option>
+                <option>Students</option>
+                <option>Busy professionals</option>
+                <option>Gift buyers</option>
+                <option>Everyone</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="features">Key features *</label>
+          <textarea id="features" rows="4" required
+            placeholder="Describe materials, benefits and uses..."></textarea>
+
+          <div class="two-col">
+            <div>
+              <label for="price">Price (optional)</label>
+              <input id="price" placeholder="e.g. ₹299">
+            </div>
+
+            <div>
+              <label for="tone">Writing style</label>
+              <select id="tone">
+                <option>Friendly & persuasive</option>
+                <option>Minimal & premium</option>
+                <option>Playful & trendy</option>
+                <option>Professional</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="platform">Selling platform</label>
+          <select id="platform">
+            <option>Instagram / WhatsApp</option>
+            <option>Etsy-style marketplace</option>
+            <option>Amazon / Online store</option>
+            <option>Local shop</option>
+          </select>
+
+          <button type="submit" id="generateBtn">
+            ✦ Generate My Listing ↗
+          </button>
+
+          <p class="hint">
+            First AI run may take a few minutes to download the model.
+          </p>
+        </form>
+      </div>
+
+      <div class="panel output-panel">
+        <div class="output-heading">
+          <h2>02. Your Sales Kit</h2>
+          <span id="status">READY</span>
+        </div>
+
+        <div id="emptyState" class="empty-state">
+          <div class="illustration">✦ ▧ ✧</div>
+          <h3>Your next great listing starts here.</h3>
+          <p>Enter your product details to create your sales kit.</p>
+          <div class="chips">
+            <span>Product title</span>
+            <span>Description</span>
+            <span>Search tags</span>
+            <span>Social caption</span>
+          </div>
+        </div>
+
+        <div id="results" class="hidden">
+          <div class="result-block">
+            <div class="result-heading">
+              <h3>Product title</h3>
+              <button class="copy-btn" data-copy="title">Copy</button>
+            </div>
+            <p id="outTitle"></p>
+          </div>
+
+          <div class="result-block">
+            <div class="result-heading">
+              <h3>Product description</h3>
+              <button class="copy-btn" data-copy="description">Copy</button>
+            </div>
+            <p id="outDescription"></p>
+          </div>
+
+          <div class="result-block">
+            <div class="result-heading">
+              <h3>Search tags</h3>
+              <button class="copy-btn" data-copy="tags">Copy</button>
+            </div>
+            <div id="outTags" class="tags"></div>
+          </div>
+
+          <div class="result-block">
+            <div class="result-heading">
+              <h3>Social media caption</h3>
+              <button class="copy-btn" data-copy="caption">Copy</button>
+            </div>
+            <p id="outCaption"></p>
+          </div>
+
+          <button id="regenerateBtn" class="secondary-btn">
+            ↻ Create another version
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="benefits">
+      <div>
+        <h3>✦ Open by design</h3>
+        <p>Uses an open-weight model through Transformers.js.</p>
+      </div>
+      <div>
+        <h3>⌂ Privacy-minded</h3>
+        <p>Product details are processed in your browser.</p>
+      </div>
+      <div>
+        <h3>↗ Built for side hustles</h3>
+        <p>Spend less time writing and more time selling.</p>
+      </div>
+    </section>
+
+    <footer>
+      <strong>SideHustle AI</strong>
+      <span>Open innovation for small businesses.</span>
+    </footer>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

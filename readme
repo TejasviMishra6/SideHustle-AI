@@ -1,0 +1,79 @@
+
+# SideHustle AI — Product Listing Studio
+
+## About the Project
+
+SideHustle AI is a browser-based tool that helps small business owners,
+Instagram sellers, handmade-product creators and resellers create
+product listings quickly.
+
+It generates product titles, descriptions, search tags and social
+media captions from basic product details.
+
+## Features
+
+- Product information form
+- AI-assisted product descriptions
+- Product title and search tags
+- Social media captions
+- Copy-to-clipboard buttons
+- Responsive website design
+- Open-weight AI model in the browser
+- No paid AI API key required
+- Local template fallback if the model fails
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Hugging Face Transformers.js
+- Xenova/flan-t5-small open-weight model
+
+## How to Run
+
+1. Download or clone the repository.
+2. Open the project folder in VS Code.
+3. Install the Live Server extension.
+4. Right-click index.html.
+5. Select Open with Live Server.
+6. Enter product information and generate a listing.
+
+The model and JavaScript library require an internet connection
+for their initial download.
+
+## How Open-Source AI Is Used
+
+The project uses Transformers.js to run the Xenova/flan-t5-small
+text-to-text model in the browser.
+
+Product details are processed in the browser rather than sent
+to a custom application server or paid AI API.
+
+If the model fails to load, a JavaScript template provides
+a fallback. Results in fallback mode are not AI-generated.
+
+## Why Open Innovation Matters
+
+Open-weight models give small businesses and developers more
+control over their AI tools.
+
+This project avoids requiring a paid AI API key, supports
+experimentation with alternative models and keeps product
+details away from a custom application backend.
+
+The current prototype still needs internet for the initial
+model download, and all generated content should be reviewed.
+
+## Future Improvements
+
+- Save product listings
+- Add more languages
+- Add custom brand styles
+- Add seller-specific templates
+- Collect feedback from real small business owners
+
+## Challenge
+
+Built for the Side Hustle theme of the
+Hacktoberfest Open-Source AI Challenge.
